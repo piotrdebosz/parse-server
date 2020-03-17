@@ -640,10 +640,10 @@ RestWrite.prototype.transformUser = function() {
     return promise;
   }
 
-  if (!this.auth.isMaster && 'emailVerified' in this.data) {
-    const error = `Clients aren't allowed to manually update email verification.`;
-    throw new Parse.Error(Parse.Error.OPERATION_FORBIDDEN, error);
-  }
+  // if (!this.auth.isMaster && 'emailVerified' in this.data) {
+  //   const error = `Clients aren't allowed to manually update email verification.`;
+  //   throw new Parse.Error(Parse.Error.OPERATION_FORBIDDEN, error);
+  // }
 
   // Do not cleanup session if objectId is not set
   if (this.query && this.objectId()) {
